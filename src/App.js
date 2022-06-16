@@ -1,12 +1,16 @@
 import React from 'react';
-import Counter from './Counter';
+import { useSelector, useDispath} from 'react-redux';
 
 function App() {
+  const counter = useSelector(store => store);
+
   return (
-    <div>
-      <Counter />
+    <div className='App'>
+      <h1>0</h1>
+      <button>+</button>
+      <button>-</button>
     </div>
-  )
+  );
 }
 
 export default App;
