@@ -6,6 +6,12 @@ export default function CounterControls() {
    return (
       <div className="CounterControls">
          <button onClick={() => dispatch ({ type: "counter/increment"})}>+</button>
+         <button onClick={() => dispatch ({ type: "counter/reset"})}>reset</button>
+         <button onClick={() => dispatch ({ type: "counter/decrement"})}>-</button>
+
+
+         <hr />
+         
       </div>
    );
 }
