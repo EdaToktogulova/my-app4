@@ -1,14 +1,10 @@
-import React from 'react';
-import { useSelector, useDispath} from 'react-redux';
+import Counter from "./Counter";
 
 function App() {
-  const counter = useSelector(store => store);
 
   return (
-    <div className='App'>
-      <h1>0</h1>
-      <button>+</button>
-      <button>-</button>
+    <div className="App">
+      <Counter/>
     </div>
   );
 }

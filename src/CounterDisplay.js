@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import { useSelector } from "react-redux";
 
 
-function CounterDisplay() {
-   const counter = useSelector();
-   return (
-      <h1 className='CounterDisplay'>{counter}</h1>
-   )
+export default function CounterDisplay() {
+   const number = useSelector((store) => {
+      return store.counter.number;
+   });
+
+   return <h1 className='CounterDisplay'>{number}</h1>
 }
 
-export default CounterDisplay

@@ -1,24 +1,12 @@
-import { useState } from "react";
+import { useDispatch } from "react-redux";
 
-function CounterControls() {
-   const [counter, setCounter] = useState(0);
-
-   function onIncrement() {
-      setCounter(counter + 1);
-   }
-   function onDecrement() {
-      setCounter(counter - 1);
-   }
-   function onReset() {
-      setCounter(0);
-   }
+export default function CounterControls() {
+   const dispatch = useDispatch();
+   
    return (
-      <div>
-         <button onClick={onIncrement}>+</button>
-         <button onClick={onDecrement}>-</button>
-         <button onClick={onReset}>Reset</button>
+      <div className="CounterControls">
+         <button onClick={() => dispatch ({ type: "counter/increment"})}>+</button>
       </div>
    );
 }
 
-export default CounterControls;
